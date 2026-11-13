@@ -1,0 +1,265 @@
+(footprint "IPEX-SMD_4P-L2.6-W2.6-LS3.0"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -5.3 0)
+		(layer "F.SilkS")
+		(uuid "acfc0e0e-bfd4-4f1a-a5e8-23be2b3d3a67")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "IPEX-SMD_4P-L2.6-W2.6-LS3.0"
+		(at 0 5.3 0)
+		(layer "F.Fab")
+		(uuid "15a410e9-764d-4547-9fb4-cadeda083875")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/C2987682.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e33bd55-cc15-4d09-9416-d488b30e9175")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Ziisor IPEX-1 surface-mount RF coaxial connector receptacle, 2.6x2.6mm, LCSC C2987682"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "33ebbff0-fe67-44bd-a9bf-80f5ada9eace")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C2987682"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2043b4d9-abcf-44b2-8bfa-d0398aa9b712")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.36 -1.36)
+		(end -0.65 -1.36)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e0270c79-991e-4dc8-9c05-57e0e247185f")
+	)
+	(fp_line
+		(start -1.36 -1.15)
+		(end -1.36 -1.36)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "212c5e43-7518-4c71-a98d-5e8b74460ce1")
+	)
+	(fp_line
+		(start -1.36 1.31)
+		(end -1.36 1.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5feffaf-8036-42a8-ba8c-9a50f7daf357")
+	)
+	(fp_line
+		(start -0.55 1.31)
+		(end -1.36 1.31)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "018651f3-8f74-4b68-97c5-996ba1d1d989")
+	)
+	(fp_line
+		(start 0.64 -1.35)
+		(end 1.33 -1.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3134958f-9776-418c-ac31-4b0600f3c404")
+	)
+	(fp_line
+		(start 1.33 -1.35)
+		(end 1.33 -1.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8101468d-8614-49dc-b1b2-4c02ad2c4a63")
+	)
+	(fp_line
+		(start 1.33 1.15)
+		(end 1.33 1.31)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3379ff2b-bfd8-471b-b2ef-b7b62aa6dffe")
+	)
+	(fp_line
+		(start 1.33 1.31)
+		(end 0.55 1.31)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4ea295b6-c39f-4344-b40c-05aca7c2247b")
+	)
+	(fp_circle
+		(center -1.5 1.58)
+		(end -1.47 1.58)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "6a5db94f-e849-4a1c-a97f-3eefe510896e")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.2 0)
+		(stroke
+			(width 0.4)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "43f4f939-e328-4d67-ba57-9913b0f9955b")
+	)
+	(fp_poly
+		(pts
+			(xy 0.18001 0.659968) (xy 0.18001 0.342062) (xy 0.170028 0.33208) (xy -0.159969 0.33208) (xy -0.159969 0.67785)
+			(xy -0.149962 0.687857) (xy 0.152121 0.687857) (xy 0.18001 0.659968)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "20d8d19b-8088-4e91-9ced-93abb88409ff")
+	)
+	(fp_line
+		(start -1.3 -1.3)
+		(end 1.3 -1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e6b0f31e-e987-407d-8231-6422f61773f9")
+	)
+	(fp_line
+		(start -1.3 1.3)
+		(end -1.3 -1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8eff275a-b33d-4e39-a9f7-b5cb7409abc3")
+	)
+	(fp_line
+		(start 1.3 -1.3)
+		(end 1.3 1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f44f8ff6-967b-41bc-afb5-a3f894efe82d")
+	)
+	(fp_line
+		(start 1.3 1.3)
+		(end -1.3 1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "316a6001-daa6-430c-b968-d595a62b903b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "96defad6-f365-4501-ae8e-b0b884898710")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.3 0 90)
+		(size 2 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "394bbdf1-f32a-4877-8a05-827bf5cac896")
+	)
+	(pad "2" smd rect
+		(at 0 -1.3 180)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8dd49b49-af82-40fe-ac41-3c1f2e71faba")
+	)
+	(pad "3" smd rect
+		(at 1.3 0 90)
+		(size 2 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "44bc43e9-e72e-4a6f-87b0-7add6b50e9bd")
+	)
+	(pad "4" smd rect
+		(at 0 1.3 270)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3b215797-223b-482b-967e-8a766096eda8")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/Vvirtue/Documents/KiCad/10.0/3dmodels/Ziisor_IPEX-1.3dshapes/IPEX-SMD_4P-L2.6-W2.6-LS3.0.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

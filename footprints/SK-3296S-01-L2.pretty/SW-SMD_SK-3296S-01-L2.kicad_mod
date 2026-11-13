@@ -1,0 +1,297 @@
+(footprint "SW-SMD_SK-3296S-01-L2"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -5.587 0)
+		(layer "F.SilkS")
+		(uuid "bc36843b-0356-485d-82e0-77c1b0e35e77")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW-SMD_SK-3296S-01-L2"
+		(at 0 5.587 0)
+		(layer "F.Fab")
+		(uuid "fcb1a91a-b756-4a9a-8718-35a36e40f92a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/product-detail/Electrical-Switches_XKB-Connectivity-SK-3296S-01-L2_C500051.html"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35728f6b-81ac-4a03-8aa6-f5f4167d989a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "XKB SK-3296S-01-L2 SPDT slide switch, right-angle SMD, 7.8x2.8mm, LCSC C500051"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "53646370-c747-4a3f-b773-4f4d991d2efb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C500051"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d6940270-5242-49ce-bab5-adf17ad36dd8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.3 0.06)
+		(end -3.3 0.91)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ed246191-4276-4e21-a852-89a12fe6e21f")
+	)
+	(fp_line
+		(start -3.12 1.85)
+		(end 3.12 1.85)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "497116ec-72f2-4666-8ee6-beda885ab81d")
+	)
+	(fp_line
+		(start -2.97 -0.9)
+		(end -3.12 -0.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a32dbf3d-83d8-4b78-bb6c-ddd21b44b09e")
+	)
+	(fp_line
+		(start 0.01 1.85)
+		(end 0.01 3.88)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77c3ec36-3a78-4ed1-90a0-15532f4d9528")
+	)
+	(fp_line
+		(start 0.01 3.88)
+		(end 1.38 3.88)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "80a647b5-0a55-4731-aaca-f39b0aa4967b")
+	)
+	(fp_line
+		(start 0.03 -0.9)
+		(end -1.63 -0.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e8c91c91-3a75-4e1b-9c68-12432b8a40d6")
+	)
+	(fp_line
+		(start 1.38 3.88)
+		(end 1.38 1.85)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa7b5ace-e010-43af-bbe2-ce33b4778bd8")
+	)
+	(fp_line
+		(start 1.53 -0.9)
+		(end 1.37 -0.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6cd01cc0-e7ff-4c7b-8801-8ef9983b4260")
+	)
+	(fp_line
+		(start 3.12 -0.9)
+		(end 2.87 -0.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "86c61ec1-f890-40b1-ba56-06e529ab681b")
+	)
+	(fp_line
+		(start 3.3 0.91)
+		(end 3.3 0.06)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4e3f2ad8-087e-44c0-8e0b-5d5abfd9ff1e")
+	)
+	(fp_circle
+		(center -3.9 -1.89)
+		(end -3.87 -1.89)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "03556a7e-10b5-4109-8d9a-b70e130e6385")
+	)
+	(fp_circle
+		(center -1.5 0.49)
+		(end -1.27 0.49)
+		(stroke
+			(width 0.45)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "75a1310e-cb4a-4fd1-940e-c0dac835dbbb")
+	)
+	(fp_circle
+		(center 1.5 0.49)
+		(end 1.73 0.49)
+		(stroke
+			(width 0.45)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "eccf3a5c-8644-474a-9bca-c97e084bd210")
+	)
+	(fp_line
+		(start 0 3.85)
+		(end 1.35 3.84)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8f60eb16-001e-4b8b-a19a-76359dcf4681")
+	)
+	(fp_line
+		(start 1.35 3.84)
+		(end 0 3.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "96b6bb1e-9d7e-4a32-85a1-609b19172634")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "beea1b35-f907-45e3-bee1-f8556720b30c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole circle
+		(at -1.5 0.49)
+		(size 1.1 1.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8007fe8c-3715-4d73-b4b7-6c44f9f7f671")
+	)
+	(pad "" thru_hole circle
+		(at 1.5 0.49)
+		(size 1.1 1.1)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fdbf1707-0d6f-403c-a4c1-10c290dc0800")
+	)
+	(pad "1" smd rect
+		(at -2.3 -1.59 180)
+		(size 0.9 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "29feac32-23b8-4cc6-a775-e5f0e21ed4c0")
+	)
+	(pad "2" smd rect
+		(at 0.7 -1.59 180)
+		(size 0.9 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c433e109-f3ff-4886-a10e-9c61a61554da")
+	)
+	(pad "3" smd rect
+		(at 2.2 -1.59 180)
+		(size 0.9 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6aacdc0d-6930-4b3b-82c7-d5f98a621c02")
+	)
+	(pad "EH" smd rect
+		(at -3.8 -0.61 180)
+		(size 0.9 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a1c7b612-a188-4268-96df-2bfc957bbe28")
+	)
+	(pad "EH" smd rect
+		(at -3.8 1.59 180)
+		(size 0.9 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f8ec132e-66eb-4b1c-84e2-03875add10f4")
+	)
+	(pad "EH" smd rect
+		(at 3.8 -0.61 180)
+		(size 0.9 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b251c9ea-b5ca-4797-a40d-e7a7a0e8aa77")
+	)
+	(pad "EH" smd rect
+		(at 3.8 1.59 180)
+		(size 0.9 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d02719a1-7a92-4a8a-a2eb-e94d9df11147")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/Vvirtue/Documents/KiCad/10.0/3dmodels/SK-3296S-01-L2.3dshapes/SW-SMD_SK-3296S-01-L2.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
