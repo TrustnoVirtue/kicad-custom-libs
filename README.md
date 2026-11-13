@@ -23,6 +23,7 @@ symbols/
    IPEX-1.kicad_sym
    JST_PH_2P.kicad_sym
    Kicad-Lora.kicad_sym
+   new_symbol.kicad_sym
    PinHeader_2P.kicad_sym
    Project_Components.kicad_sym
    SK-3296S-01-L2.kicad_sym
@@ -78,7 +79,7 @@ KICAD_VERSION=10.0 INSTALL_DIR="$HOME/kicad-libs" CONFIG_DIR="$HOME/.config/kica
    path under the install folder, so no environment variables are required
    on the target machine.
 3. Adds or updates the nine footprint libraries in `fp-lib-table` and the
-   nine symbol libraries in `sym-lib-table`.
+   ten symbol libraries in `sym-lib-table`.
 
 Restart KiCad afterwards and check Preferences -> Manage Footprint Libraries
 and Preferences -> Manage Symbol Libraries.
@@ -100,6 +101,7 @@ Register each `symbols/*.kicad_sym` file as a symbol library
 (lib (name "easyeda2kicad") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/easyeda2kicad.kicad_sym"))
 (lib (name "SK-3296S-01-L2") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/SK-3296S-01-L2.kicad_sym"))
 (lib (name "Kicad-Lora") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/Kicad-Lora.kicad_sym"))
+(lib (name "new_symbol") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/new_symbol.kicad_sym"))
 ```
 
 Set `KICAD_CUSTOM_LIBS` to the folder where this repo is cloned, or use absolute paths.

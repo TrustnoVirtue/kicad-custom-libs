@@ -133,9 +133,9 @@ if [ "${NO_REGISTER:-0}" != "1" ]; then
     fp_names="easyeda2kicad,IPEX-1,JST_PH_2P,new_footprint,PinHeader_2P,Project_Components,SK-3296S-01-L2,TYPEC-304J-BCP16,Ziisor_IPEX-1"
     register_lib_table "$CONFIG_DIR/fp-lib-table" fp_lib_table footprints .pretty "$fp_names"
     echo "Registered 9 footprint libraries in $CONFIG_DIR/fp-lib-table"
-    sym_names="easyeda2kicad,IPEX-1,JST_PH_2P,Kicad-Lora,PinHeader_2P,Project_Components,SK-3296S-01-L2,TYPEC-304J-BCP16,Ziisor_IPEX-1"
+    sym_names="easyeda2kicad,IPEX-1,JST_PH_2P,Kicad-Lora,new_symbol,PinHeader_2P,Project_Components,SK-3296S-01-L2,TYPEC-304J-BCP16,Ziisor_IPEX-1"
     register_lib_table "$CONFIG_DIR/sym-lib-table" sym_lib_table symbols .kicad_sym "$sym_names"
-    echo "Registered 9 symbol libraries in $CONFIG_DIR/sym-lib-table"
+    echo "Registered 10 symbol libraries in $CONFIG_DIR/sym-lib-table"
 fi
 
 echo ""
