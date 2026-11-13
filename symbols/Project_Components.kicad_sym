@@ -1,0 +1,1605 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "component_importer")
+  (generator_version "0.1")
+
+(symbol "ATMEGA328PB-AU" (in_bom yes) (on_board yes)
+
+    (property "Reference" "IC" (at 77.47 43.18 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "ATMEGA328PB-AU" (at 77.47 40.64 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "http://www.farnell.com/datasheets/2014286.pdf" (at 77.47 -159.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "ATMEL - ATMEGA328PB-AU - MCU, 8BIT, ATMEGA, 20MHZ, TQFP-32" (at 77.47 -259.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "1.2" (at 77.47 -359.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Microchip" (at 77.47 -459.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "ATMEGA328PB-AU" (at 77.47 -559.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "556-ATMEGA328PB-AU" (at 77.47 -659.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATMEGA328PB-AU?qs=jy4bLUHv09hbFONgGrqPbw%3D%3D" (at 77.47 -759.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "ATMEGA328PB-AU" (at 77.47 -859.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/atmega328pb-au/microchip-technology.html?utm_currency=USD&region=nac" (at 77.47 -959.36 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:QFP80P900X900X120-32N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:QFP80P900X900X120-32N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 5.08 38.1)
+
+      (end 76.2 -58.42)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 0 0 0) (length 5.08)
+
+      (name "(OC2B/INT1/PTCXY)_PD3" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -2.54 0) (length 5.08)
+
+      (name "(XCK0/T0/PTCXY)_PD4" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -5.08 0) (length 5.08)
+
+      (name "(SDA1/ICP4/ACO/PTCXY)_PE0" (effects (font (size 1.27 1.27))))
+
+      (number "3" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -7.62 0) (length 5.08)
+
+      (name "VCC" (effects (font (size 1.27 1.27))))
+
+      (number "4" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -10.16 0) (length 5.08)
+
+      (name "GND_1" (effects (font (size 1.27 1.27))))
+
+      (number "5" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -12.7 0) (length 5.08)
+
+      (name "(SCL1/T4/PTCXY)_PE1" (effects (font (size 1.27 1.27))))
+
+      (number "6" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -15.24 0) (length 5.08)
+
+      (name "(XTAL1/TOSC1)_PB6" (effects (font (size 1.27 1.27))))
+
+      (number "7" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 0 -17.78 0) (length 5.08)
+
+      (name "(XTAL2/TOSC2)_PB7" (effects (font (size 1.27 1.27))))
+
+      (number "8" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 30.48 -63.5 90) (length 5.08)
+
+      (name "(OC0B/T1/PTCXY)_PD5" (effects (font (size 1.27 1.27))))
+
+      (number "9" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 33.02 -63.5 90) (length 5.08)
+
+      (name "(OC0A/PTCXY/AIN0)_PD6" (effects (font (size 1.27 1.27))))
+
+      (number "10" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 35.56 -63.5 90) (length 5.08)
+
+      (name "(PTCXY/AIN1)_PD7" (effects (font (size 1.27 1.27))))
+
+      (number "11" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 38.1 -63.5 90) (length 5.08)
+
+      (name "(ICP1/CLKO/PTCXY)_PB0" (effects (font (size 1.27 1.27))))
+
+      (number "12" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 40.64 -63.5 90) (length 5.08)
+
+      (name "(OC1A/PTCXY)_PB1" (effects (font (size 1.27 1.27))))
+
+      (number "13" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 43.18 -63.5 90) (length 5.08)
+
+      (name "(~{SS0}/OC1B/PTCXY)_PB2" (effects (font (size 1.27 1.27))))
+
+      (number "14" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 45.72 -63.5 90) (length 5.08)
+
+      (name "(MOSI0/TXD1/OC2A/PTCXY)_PB3" (effects (font (size 1.27 1.27))))
+
+      (number "15" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 48.26 -63.5 90) (length 5.08)
+
+      (name "(MISO0/RXD1/PTCXY)_PB4" (effects (font (size 1.27 1.27))))
+
+      (number "16" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 0 180) (length 5.08)
+
+      (name "PC1_(ADC1/PTCY/SCK1)" (effects (font (size 1.27 1.27))))
+
+      (number "24" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -2.54 180) (length 5.08)
+
+      (name "PC0_(ADC0/PTCY/MISO1)" (effects (font (size 1.27 1.27))))
+
+      (number "23" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -5.08 180) (length 5.08)
+
+      (name "PE3_(ADC7/PTCY/T3/MOSI1)" (effects (font (size 1.27 1.27))))
+
+      (number "22" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -7.62 180) (length 5.08)
+
+      (name "GND_2" (effects (font (size 1.27 1.27))))
+
+      (number "21" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -10.16 180) (length 5.08)
+
+      (name "AREF" (effects (font (size 1.27 1.27))))
+
+      (number "20" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -12.7 180) (length 5.08)
+
+      (name "PE2_(ADC6/PTCY/ICP3/~{SS1)}" (effects (font (size 1.27 1.27))))
+
+      (number "19" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -15.24 180) (length 5.08)
+
+      (name "AVCC" (effects (font (size 1.27 1.27))))
+
+      (number "18" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 81.28 -17.78 180) (length 5.08)
+
+      (name "PB5_(PTCXY/XCK0/SCK0)" (effects (font (size 1.27 1.27))))
+
+      (number "17" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 30.48 43.18 270) (length 5.08)
+
+      (name "PD2_(PTCXY/INT0/OC3B/OC4B)" (effects (font (size 1.27 1.27))))
+
+      (number "32" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 33.02 43.18 270) (length 5.08)
+
+      (name "PD1_(PTCXY/OC4A/TXD0)" (effects (font (size 1.27 1.27))))
+
+      (number "31" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 35.56 43.18 270) (length 5.08)
+
+      (name "PD0_(PTCXY/OC3A/RXD0)" (effects (font (size 1.27 1.27))))
+
+      (number "30" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 38.1 43.18 270) (length 5.08)
+
+      (name "PC6_(~{RESET)}" (effects (font (size 1.27 1.27))))
+
+      (number "29" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 40.64 43.18 270) (length 5.08)
+
+      (name "PC5_(ADC5/PTCY/SCL0)" (effects (font (size 1.27 1.27))))
+
+      (number "28" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 43.18 43.18 270) (length 5.08)
+
+      (name "PC4_(ADC4/PTCY/SDA0)" (effects (font (size 1.27 1.27))))
+
+      (number "27" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 45.72 43.18 270) (length 5.08)
+
+      (name "PC3_(ADC3/PTCY)" (effects (font (size 1.27 1.27))))
+
+      (number "26" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 48.26 43.18 270) (length 5.08)
+
+      (name "PC2_(ADC2/PTCY)" (effects (font (size 1.27 1.27))))
+
+      (number "25" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "04023C101KAT2A" (in_bom yes) (on_board yes) (pin_names hide)
+
+    (property "Reference" "C" (at 8.89 6.35 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "04023C101KAT2A" (at 8.89 3.81 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "http://www.mouser.com/catalog/supplier/library/pdf/AVXSurfaceMountCeramic.pdf" (at 8.89 -196.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "AVX - 04023C101KAT2A - CAP, MLCC, X7R, 100PF, 25V, 0402" (at 8.89 -296.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "0.56" (at 8.89 -396.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Kyocera AVX" (at 8.89 -496.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "04023C101KAT2A" (at 8.89 -596.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "581-04023C101KAT2A" (at 8.89 -696.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/AVX/04023C101KAT2A?qs=kuXGNzC0dbGAOax4tb6IWA%3D%3D" (at 8.89 -796.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "04023C101KAT2A" (at 8.89 -896.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/04023c101kat2a/avx?utm_currency=USD&region=nac" (at 8.89 -996.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:CAPC1005X56N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:CAPC1005X56N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 5.588 2.54)
+
+        (xy 5.588 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 2.54)
+
+        (xy 7.112 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 5.08 0)
+
+        (xy 5.588 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 0)
+
+        (xy 7.62 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 2.54 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 10.16 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "02015A390GAT2A" (in_bom yes) (on_board yes) (pin_names hide)
+
+    (property "Reference" "C" (at 8.89 6.35 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "02015A390GAT2A" (at 8.89 3.81 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "http://www.mouser.com/catalog/supplier/library/pdf/AVXSurfaceMountCeramic.pdf" (at 8.89 -196.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50V 39pF C0G 2%" (at 8.89 -296.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "0.33" (at 8.89 -396.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Kyocera AVX" (at 8.89 -496.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "02015A390GAT2A" (at 8.89 -596.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "581-02015A390GAT2A" (at 8.89 -696.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Kyocera-AVX/02015A390GAT2A?qs=%252B6g0mu59x7KDeg8zCBQrzw%3D%3D" (at 8.89 -796.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "" (at 8.89 -896.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "" (at 8.89 -996.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:CAPC0603X33N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:CAPC0603X33N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 5.588 2.54)
+
+        (xy 5.588 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 2.54)
+
+        (xy 7.112 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 5.08 0)
+
+        (xy 5.588 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 0)
+
+        (xy 7.62 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 2.54 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 10.16 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "RC0603FR-0710KL" (in_bom yes) (on_board yes) (pin_names hide)
+
+    (property "Reference" "R" (at 13.97 6.35 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "RC0603FR-0710KL" (at 13.97 3.81 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "http://www.yageo.com/documents/recent/PYu-RC0603_51_RoHS_L_v5.pdf" (at 13.97 -196.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "Yageo RC Series Thick Film Surface Mount Resistor 0603 Case 10k" (at 13.97 -296.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "0.55" (at 13.97 -396.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Yageo Group" (at 13.97 -496.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "RC0603FR-0710KL" (at 13.97 -596.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "603-RC0603FR-0710KL" (at 13.97 -696.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/YAGEO/RC0603FR-0710KL?qs=grNVn54RoB%252B3GtjbJj3wJQ%3D%3D" (at 13.97 -796.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "RC0603FR-0710KL" (at 13.97 -896.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/rc0603fr-0710kl/yageo.html?utm_currency=USD&region=nac" (at 13.97 -996.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:RESC1608X55N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:RESC1608X55N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 2.54 1.27)
+
+      (end 15.24 -1.27)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 0 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 17.78 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "RC0603FR-07330RL" (in_bom yes) (on_board yes) (pin_names hide)
+
+    (property "Reference" "R" (at 13.97 6.35 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "RC0603FR-07330RL" (at 13.97 3.81 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "http://www.yageo.com/documents/recent/PYu-RC0603_51_RoHS_L_v5.pdf" (at 13.97 -196.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "YAGEO (PHYCOMP) - RC0603FR-07330RL - RES, THICK FILM, 330R, 1%, 0.1W, 0603" (at 13.97 -296.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "0.55" (at 13.97 -396.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Yageo Group" (at 13.97 -496.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "RC0603FR-07330RL" (at 13.97 -596.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "603-RC0603FR-07330RL" (at 13.97 -696.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Yageo/RC0603FR-07330RL?qs=diQw95jMAeN1335dAOzMfg%3D%3D" (at 13.97 -796.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "RC0603FR-07330RL" (at 13.97 -896.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/rc0603fr-07330rl/yageo.html?utm_currency=USD&region=nac" (at 13.97 -996.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:RESC1608X55N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:RESC1608X55N"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 2.54 1.27)
+
+      (end 15.24 -1.27)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 0 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 17.78 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "ABLS-16.000MHZ-B2-T" (in_bom yes) (on_board yes) (pin_names hide)
+
+    (property "Reference" "Y" (at 8.89 6.35 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "ABLS-16.000MHZ-B2-T" (at 8.89 3.81 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "https://abracon.com/Resonators/abls.pdf" (at 8.89 -196.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "HC/49US (AT49) SMD LOW PROFILE CRYSTAL" (at 8.89 -296.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "" (at 8.89 -396.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "ABRACON" (at 8.89 -496.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "ABLS-16.000MHZ-B2-T" (at 8.89 -596.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "815-ABLS-16-B2" (at 8.89 -696.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/ABRACON/ABLS-16.000MHZ-B2-T?qs=m%252BUhWDcpCfbvl4COQ0ty%2FA%3D%3D" (at 8.89 -796.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "ABLS-16.000MHZ-B2-T" (at 8.89 -896.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/abls-16.000mhz-b2-t/abracon?utm_currency=USD&region=nac" (at 8.89 -996.19 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:ABLS"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:ABLS"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 4.064 3.556)
+
+      (end 6.096 -3.556)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 3.048 2.54)
+
+        (xy 3.048 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 2.54)
+
+        (xy 7.112 -2.54)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 7.112 0)
+
+        (xy 7.62 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (polyline
+
+      (pts
+
+        (xy 3.048 0)
+
+        (xy 2.54 0)
+
+      )
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 0 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 10.16 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "61300611121" (in_bom yes) (on_board yes)
+
+    (property "Reference" "J" (at 16.51 7.62 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "61300611121" (at 16.51 5.08 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "https://www.we-online.com/components/products/datasheet/61300611121.pdf" (at 16.51 -194.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "WR-PHD 2.54 mm Pin Header 6 pins, 1 row, straight, gold plating, 250V, -40C ~ 105C" (at 16.51 -294.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "8.94" (at 16.51 -394.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Wurth Elektronik" (at 16.51 -494.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "61300611121" (at 16.51 -594.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "710-61300611121" (at 16.51 -694.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/61300611121?qs=t4813l51qx%2FRpdf0Kp1HlQ%3D%3D" (at 16.51 -794.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "61300611121" (at 16.51 -894.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "null?utm_currency=USD&region=asia" (at 16.51 -994.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:HDRV6W79P0X254_1X6_1524X254X894P"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:HDRV6W79P0X254_1X6_1524X254X894P"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 5.08 2.54)
+
+      (end 15.24 -15.24)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 2.54 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -2.54 0) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -5.08 0) (length 2.54)
+
+      (name "3" (effects (font (size 1.27 1.27))))
+
+      (number "3" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -7.62 0) (length 2.54)
+
+      (name "4" (effects (font (size 1.27 1.27))))
+
+      (number "4" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -10.16 0) (length 2.54)
+
+      (name "5" (effects (font (size 1.27 1.27))))
+
+      (number "5" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -12.7 0) (length 2.54)
+
+      (name "6" (effects (font (size 1.27 1.27))))
+
+      (number "6" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "PBC03DAAN" (in_bom yes) (on_board yes)
+
+    (property "Reference" "J" (at 16.51 7.62 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "PBC03DAAN" (at 16.51 5.08 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "https://drawings-pdf.s3.amazonaws.com/C10419.pdf" (at 16.51 -194.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "Connector Header Through Hole 6 position 0.100\" (2.54mm)" (at 16.51 -294.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "8.58" (at 16.51 -394.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "Sullins" (at 16.51 -494.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "PBC03DAAN" (at 16.51 -594.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "" (at 16.51 -694.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "" (at 16.51 -794.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "" (at 16.51 -894.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "" (at 16.51 -994.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:HDRV6W64P254_2X3_762X508X858P"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:HDRV6W64P254_2X3_762X508X858P"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 3.81 2.54)
+
+      (end 16.51 -7.62)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 1.27 0 0) (length 2.54)
+
+      (name "1" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 1.27 -2.54 0) (length 2.54)
+
+      (name "3" (effects (font (size 1.27 1.27))))
+
+      (number "3" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 1.27 -5.08 0) (length 2.54)
+
+      (name "5" (effects (font (size 1.27 1.27))))
+
+      (number "5" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 19.05 0 180) (length 2.54)
+
+      (name "2" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 19.05 -2.54 180) (length 2.54)
+
+      (name "4" (effects (font (size 1.27 1.27))))
+
+      (number "4" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 19.05 -5.08 180) (length 2.54)
+
+      (name "6" (effects (font (size 1.27 1.27))))
+
+      (number "6" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "B13JJHCF" (in_bom yes) (on_board yes)
+
+    (property "Reference" "S" (at 44.45 7.62 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "B13JJHCF" (at 44.45 5.08 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "https://www.mouser.dk/ProductDetail/NKK-Switches/B13JJHCF?qs=7qTko1p7JkMf04Pp%2FXxldA==" (at 44.45 -194.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "SWITCH TOGGLE SPDT 0.4VA 28V" (at 44.45 -294.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "8.8" (at 44.45 -394.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "NKK Switches" (at 44.45 -494.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "B13JJHCF" (at 44.45 -594.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "633-B13JJHCF" (at 44.45 -694.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/NKK-Switches/B13JJHCF?qs=7qTko1p7JkMf04Pp%2FXxldA%3D%3D" (at 44.45 -794.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "" (at 44.45 -894.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "" (at 44.45 -994.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:B13JJHCF"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:B13JJHCF"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 6.35 2.54)
+
+      (end 41.91 -10.16)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 3.81 0 0) (length 2.54)
+
+      (name "NO" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 3.81 -2.54 0) (length 2.54)
+
+      (name "COM" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin no_connect line (at 3.81 -5.08 0) (length 2.54)
+
+      (name "NC" (effects (font (size 1.27 1.27))))
+
+      (number "3" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 3.81 -7.62 0) (length 2.54)
+
+      (name "RED_CATHODE" (effects (font (size 1.27 1.27))))
+
+      (number "4" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 44.45 0 180) (length 2.54)
+
+      (name "ANODE" (effects (font (size 1.27 1.27))))
+
+      (number "5" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 44.45 -2.54 180) (length 2.54)
+
+      (name "GREEN_CATHODE" (effects (font (size 1.27 1.27))))
+
+      (number "6" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 44.45 -5.08 180) (length 2.54)
+
+      (name "MH1" (effects (font (size 1.27 1.27))))
+
+      (number "MH1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 44.45 -7.62 180) (length 2.54)
+
+      (name "MH2" (effects (font (size 1.27 1.27))))
+
+      (number "MH2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+
+(symbol "TS-1088R-02526" (in_bom yes) (on_board yes)
+
+    (property "Reference" "J" (at 19.05 7.62 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    (property "Value" "TS-1088R-02526" (at 19.05 5.08 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top))
+
+    )
+
+    
+
+    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1911181806_XUNPU-TS-1088R-02526_C455281.pdf" (at 19.05 -194.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "ki_description" "Tact Switch" (at 19.05 -294.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Height" "2.5" (at 19.05 -394.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Name" "XUNPU" (at 19.05 -494.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Manufacturer_Part_Number" "TS-1088R-02526" (at 19.05 -594.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Part Number" "" (at 19.05 -694.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Mouser Price/Stock" "" (at 19.05 -794.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Part Number" "" (at 19.05 -894.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+
+    (property "Arrow Price/Stock" "" (at 19.05 -994.92 0)
+
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+
+    )
+    (property "Footprint" "Project_Components:TS1088R02526"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Project_Components:TS1088R02526"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (rectangle
+
+      (start 5.08 2.54)
+
+      (end 17.78 -5.08)
+
+      (stroke (width 0.254) (type default) (color 132 0 0 1))
+
+      (fill (type color) (color 255 255 194 1))
+
+    )
+
+    (pin passive line (at 2.54 0 0) (length 2.54)
+
+      (name "COM" (effects (font (size 1.27 1.27))))
+
+      (number "1" (effects (font (size 1.27 1.27))))
+
+    )
+
+    (pin passive line (at 2.54 -2.54 0) (length 2.54)
+
+      (name "NO" (effects (font (size 1.27 1.27))))
+
+      (number "2" (effects (font (size 1.27 1.27))))
+
+    )
+
+  )
+)

@@ -1,7 +1,7 @@
-# KiCad Custom Footprint Libraries and 3D Models
+# KiCad Custom Footprint Libraries, Symbols and 3D Models
 
-Custom footprints and 3D models used by the activity5 LoRa sensor board
-(ESP32-S3 + BQ24074 charger + XC6220 LDO + RA-01SH LoRa + BME280 + GPS + SD/USB-C).
+Custom footprints, symbol libraries and 3D models used by the activity5 LoRa
+sensor board (ESP32-S3 + BQ24074 charger + XC6220 LDO + RA-01SH LoRa + BME280 + GPS + SD/USB-C).
 
 Exported from KiCad 10 / easyeda2kicad on 2026-11-13.
 
@@ -18,6 +18,15 @@ footprints/
    SK-3296S-01-L2.pretty
    TYPEC-304J-BCP16.pretty
    Ziisor_IPEX-1.pretty
+symbols/
+   easyeda2kicad.kicad_sym
+   IPEX-1.kicad_sym
+   JST_PH_2P.kicad_sym
+   PinHeader_2P.kicad_sym
+   Project_Components.kicad_sym
+   SK-3296S-01-L2.kicad_sym
+   TYPEC-304J-BCP16.kicad_sym
+   Ziisor_IPEX-1.kicad_sym
 3dmodels/
    easyeda2kicad.3dshapes
    IPEX-1.3dshapes
@@ -62,14 +71,16 @@ KICAD_VERSION=10.0 INSTALL_DIR="$HOME/kicad-libs" CONFIG_DIR="$HOME/.config/kica
 
 ### What the installer does
 
-1. Copies all `.pretty` folders and `.3dshapes` folders to the install folder
-   (default: `Documents/KiCad/<version>/kicad-custom-libs`).
+1. Copies all `.pretty` folders, `.kicad_sym` files and `.3dshapes` folders to
+   the install folder (default: `Documents/KiCad/<version>/kicad-custom-libs`).
 2. Rewrites every 3D model path inside the installed footprints to an absolute
    path under the install folder, so no environment variables are required
    on the target machine.
-3. Adds or updates the nine library entries in the user's `fp-lib-table`.
+3. Adds or updates the nine footprint libraries in `fp-lib-table` and the
+   eight symbol libraries in `sym-lib-table`.
 
-Restart KiCad afterwards and check Preferences -> Manage Footprint Libraries.
+Restart KiCad afterwards and check Preferences -> Manage Footprint Libraries
+and Preferences -> Manage Symbol Libraries.
 
 ## Using these libraries manually
 
@@ -79,6 +90,14 @@ Register each `.pretty` folder as a KiCad footprint library
 ```
 (lib (name "easyeda2kicad") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/footprints/easyeda2kicad.pretty"))
 (lib (name "SK-3296S-01-L2") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/footprints/SK-3296S-01-L2.pretty"))
+```
+
+Register each `symbols/*.kicad_sym` file as a symbol library
+(Preferences -> Manage Symbol Libraries), for example:
+
+```
+(lib (name "easyeda2kicad") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/easyeda2kicad.kicad_sym"))
+(lib (name "SK-3296S-01-L2") (type "KiCad") (uri "${KICAD_CUSTOM_LIBS}/symbols/SK-3296S-01-L2.kicad_sym"))
 ```
 
 Set `KICAD_CUSTOM_LIBS` to the folder where this repo is cloned, or use absolute paths.

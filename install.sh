@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# Installs the custom KiCad footprint libraries and 3D models from this
-# repository into a local KiCad installation and registers them in
-# KiCad's fp-lib-table.
+# Installs the custom KiCad footprint libraries, symbol libraries and 3D
+# models from this repository into a local KiCad installation and registers
+# them in KiCad's fp-lib-table and sym-lib-table.
 #
 # Usage:
 #   ./install.sh
@@ -13,10 +13,10 @@
 #   KICAD_VERSION  KiCad version folder (auto-detected when omitted)
 #   INSTALL_DIR    target folder for the libraries
 #                  (default: ~/Documents/KiCad/<version>/kicad-custom-libs)
-#   CONFIG_DIR     folder containing fp-lib-table
+#   CONFIG_DIR     folder containing fp-lib-table and sym-lib-table
 #                  (default: ~/.config/kicad/<version> or
 #                   ~/Library/Preferences/kicad/<version> on macOS)
-#   NO_REGISTER    set to 1 to skip fp-lib-table registration
+#   NO_REGISTER    set to 1 to skip fp-lib-table and sym-lib-table registration
 
 set -euo pipefail
 
@@ -28,6 +28,7 @@ die() { echo "Error: $*" >&2; exit 1; }
 
 [ -d "$REPO/footprints" ] || die "footprints/ not found next to this script. Run the script from the repository root."
 [ -d "$REPO/3dmodels" ] || die "3dmodels/ not found next to this script."
+[ -d "$REPO/symbols" ] || die "symbols/ not found next to this script."
 
 case "$(uname -s)" in
     Darwin) CONFIG_BASE="$HOME/Library/Preferences/kicad" ;;
@@ -65,8 +66,9 @@ echo "Config folder : $CONFIG_DIR"
 
 command -v perl >/dev/null 2>&1 || die "perl is required for 3D model path rewriting."
 
-mkdir -p "$INSTALL_DIR/footprints" "$INSTALL_DIR/3dmodels"
+mkdir -p "$INSTALL_DIR/footprints" "$INSTALL_DIR/symbols" "$INSTALL_DIR/3dmodels"
 cp -R "$REPO/footprints/." "$INSTALL_DIR/footprints/"
+cp -R "$REPO/symbols/." "$INSTALL_DIR/symbols/"
 cp -R "$REPO/3dmodels/." "$INSTALL_DIR/3dmodels/"
 
 echo "Rewriting 3D model paths in installed footprints..."
@@ -87,18 +89,18 @@ find "$INSTALL_DIR/footprints" -name '*.kicad_mod' -print0 | while IFS= read -r 
     ' "$file"
 done
 
-if [ "${NO_REGISTER:-0}" != "1" ]; then
-    mkdir -p "$CONFIG_DIR"
-    TABLE="$CONFIG_DIR/fp-lib-table"
-    export TABLE
-    perl -e '
+register_lib_table() {
+    TABLE="$1" TABLE_NAME="$2" SUBDIR="$3" EXT="$4" NAMES="$5" perl -e '
         my $table = $ENV{TABLE};
+        my $table_name = $ENV{TABLE_NAME};
         my $root  = $ENV{INSTALL_DIR};
         $root =~ s{\\}{/}g;
         $root =~ s{/+$}{};
-        my @names = ("easyeda2kicad", "IPEX-1", "JST_PH_2P", "new_footprint", "PinHeader_2P", "Project_Components", "SK-3296S-01-L2", "TYPEC-304J-BCP16", "Ziisor_IPEX-1");
+        my $subdir = $ENV{SUBDIR};
+        my $ext = $ENV{EXT};
+        my @names = split /,/, $ENV{NAMES};
         my %uri;
-        for my $n (@names) { $uri{$n} = "$root/footprints/$n.pretty"; }
+        for my $n (@names) { $uri{$n} = "$root/$subdir/$n$ext"; }
         my @lines;
         if (-e $table) {
             open(my $fh, "<", $table) or die "cannot read $table: $!";
@@ -107,7 +109,7 @@ if [ "${NO_REGISTER:-0}" != "1" ]; then
             chomp @lines;
         }
         else {
-            @lines = ("(fp_lib_table", "\t(version 7)", ")");
+            @lines = ("($table_name", "\t(version 7)", ")");
         }
         my $alt = join("|", map { quotemeta($_) } @names);
         @lines = grep { !/^\s*\(lib\s+\(name\s+"(?:$alt)"\)/ } @lines;
@@ -124,9 +126,18 @@ if [ "${NO_REGISTER:-0}" != "1" ]; then
         print $out join("\n", @lines), "\n";
         close($out);
     '
-    echo "Registered 9 libraries in $TABLE"
+}
+
+if [ "${NO_REGISTER:-0}" != "1" ]; then
+    mkdir -p "$CONFIG_DIR"
+    fp_names="easyeda2kicad,IPEX-1,JST_PH_2P,new_footprint,PinHeader_2P,Project_Components,SK-3296S-01-L2,TYPEC-304J-BCP16,Ziisor_IPEX-1"
+    register_lib_table "$CONFIG_DIR/fp-lib-table" fp_lib_table footprints .pretty "$fp_names"
+    echo "Registered 9 footprint libraries in $CONFIG_DIR/fp-lib-table"
+    sym_names="easyeda2kicad,IPEX-1,JST_PH_2P,PinHeader_2P,Project_Components,SK-3296S-01-L2,TYPEC-304J-BCP16,Ziisor_IPEX-1"
+    register_lib_table "$CONFIG_DIR/sym-lib-table" sym_lib_table symbols .kicad_sym "$sym_names"
+    echo "Registered 8 symbol libraries in $CONFIG_DIR/sym-lib-table"
 fi
 
 echo ""
-echo "Done. Open KiCad -> Preferences -> Manage Footprint Libraries to verify the libraries."
+echo "Done. Open KiCad -> Preferences -> Manage Footprint Libraries and Manage Symbol Libraries to verify the libraries."
 echo "The 3D models are installed next to the footprints and referenced by absolute path."

@@ -1,15 +1,15 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Installs the custom KiCad footprint libraries and 3D models from this
-    repository into a local KiCad installation and registers them in
-    KiCad's fp-lib-table.
+    Installs the custom KiCad footprint libraries, symbol libraries and 3D
+    models from this repository into a local KiCad installation and
+    registers them in KiCad's fp-lib-table and sym-lib-table.
 
 .DESCRIPTION
-    Copies footprints/*.pretty and 3dmodels/*.3dshapes to a local folder,
-    rewrites the 3D model references inside the copied footprints so they
-    point at the local install folder, and adds/updates the library entries
-    in the user's fp-lib-table.
+    Copies footprints/*.pretty, symbols/*.kicad_sym and 3dmodels/*.3dshapes
+    to a local folder, rewrites the 3D model references inside the copied
+    footprints so they point at the local install folder, and adds/updates
+    the library entries in the user's fp-lib-table and sym-lib-table.
 
 .PARAMETER KicadVersion
     KiCad version folder to use (for example "10.0"). Detected automatically
@@ -20,10 +20,11 @@
     <Documents>\KiCad\<version>\kicad-custom-libs.
 
 .PARAMETER ConfigDir
-    Folder containing fp-lib-table. Defaults to %APPDATA%\kicad\<version>.
+    Folder containing fp-lib-table and sym-lib-table. Defaults to
+    %APPDATA%\kicad\<version>.
 
 .PARAMETER NoRegister
-    Copy the libraries but do not modify fp-lib-table.
+    Copy the libraries but do not modify fp-lib-table or sym-lib-table.
 
 .EXAMPLE
     .\install.ps1
@@ -47,6 +48,9 @@ if (-not (Test-Path -LiteralPath (Join-Path $repoRoot 'footprints'))) {
 }
 if (-not (Test-Path -LiteralPath (Join-Path $repoRoot '3dmodels'))) {
     throw "3dmodels/ not found next to this script."
+}
+if (-not (Test-Path -LiteralPath (Join-Path $repoRoot 'symbols'))) {
+    throw "symbols/ not found next to this script."
 }
 
 $configBase = if ($env:APPDATA) { Join-Path $env:APPDATA 'kicad' } else { $null }
@@ -92,8 +96,9 @@ function Copy-LibraryTree {
     }
 }
 
-Write-Host 'Copying footprints and 3D models...'
+Write-Host 'Copying footprints, symbols and 3D models...'
 Copy-LibraryTree -Source (Join-Path $repoRoot 'footprints') -Destination (Join-Path $InstallDir 'footprints')
+Copy-LibraryTree -Source (Join-Path $repoRoot 'symbols') -Destination (Join-Path $InstallDir 'symbols')
 Copy-LibraryTree -Source (Join-Path $repoRoot '3dmodels') -Destination (Join-Path $InstallDir '3dmodels')
 
 $modelMap = [ordered]@{
@@ -119,36 +124,27 @@ Get-ChildItem -LiteralPath (Join-Path $InstallDir 'footprints') -Recurse -Filter
 }
 Write-Host "Patched $patched footprint file(s)."
 
-if (-not $NoRegister) {
-    $libUris = [ordered]@{
-        'easyeda2kicad'      = "$installFwd/footprints/easyeda2kicad.pretty"
-        'IPEX-1'             = "$installFwd/footprints/IPEX-1.pretty"
-        'JST_PH_2P'          = "$installFwd/footprints/JST_PH_2P.pretty"
-        'new_footprint'      = "$installFwd/footprints/new_footprint.pretty"
-        'PinHeader_2P'       = "$installFwd/footprints/PinHeader_2P.pretty"
-        'Project_Components' = "$installFwd/footprints/Project_Components.pretty"
-        'SK-3296S-01-L2'     = "$installFwd/footprints/SK-3296S-01-L2.pretty"
-        'TYPEC-304J-BCP16'   = "$installFwd/footprints/TYPEC-304J-BCP16.pretty"
-        'Ziisor_IPEX-1'      = "$installFwd/footprints/Ziisor_IPEX-1.pretty"
-    }
+function Update-LibTable {
+    param(
+        [string]$TablePath,
+        [string]$TableName,
+        [System.Collections.IDictionary]$Uris
+    )
 
-    New-Item -ItemType Directory -Path $configDirPath -Force | Out-Null
-    $tablePath = Join-Path $configDirPath 'fp-lib-table'
-
-    if (Test-Path -LiteralPath $tablePath) {
-        $lines = [System.IO.File]::ReadAllText($tablePath) -split "\r?\n"
+    if (Test-Path -LiteralPath $TablePath) {
+        $lines = [System.IO.File]::ReadAllText($TablePath) -split "\r?\n"
     }
     else {
-        $lines = @('(fp_lib_table', "`t(version 7)", ')')
+        $lines = @("($TableName", "`t(version 7)", ')')
     }
 
-    $nameAlternation = ($libUris.Keys | ForEach-Object { [regex]::Escape($_) }) -join '|'
+    $nameAlternation = ($Uris.Keys | ForEach-Object { [regex]::Escape($_) }) -join '|'
     $entryPattern = '^\s*\(lib\s+\(name\s+"(?:' + $nameAlternation + ')"\)'
     $lines = @($lines | Where-Object { $_ -notmatch $entryPattern })
 
     $entries = @()
-    foreach ($name in $libUris.Keys) {
-        $entries += "`t(lib (name `"$name`") (type `"KiCad`") (uri `"$($libUris[$name])`") (options `"`") (descr `"Installed by the kicad-custom-libs installer`"))"
+    foreach ($name in $Uris.Keys) {
+        $entries += "`t(lib (name `"$name`") (type `"KiCad`") (uri `"$($Uris[$name])`") (options `"`") (descr `"Installed by the kicad-custom-libs installer`"))"
     }
 
     $insertAt = -1
@@ -165,10 +161,42 @@ if (-not $NoRegister) {
         $lines = $lines + $entries
     }
 
-    [System.IO.File]::WriteAllText($tablePath, (($lines -join "`n").TrimEnd("`r", "`n") + "`n"), $utf8NoBom)
-    Write-Host "Registered $($libUris.Count) libraries in $tablePath"
+    [System.IO.File]::WriteAllText($TablePath, (($lines -join "`n").TrimEnd("`r", "`n") + "`n"), $utf8NoBom)
+}
+
+if (-not $NoRegister) {
+    New-Item -ItemType Directory -Path $configDirPath -Force | Out-Null
+
+    $footprintUris = [ordered]@{
+        'easyeda2kicad'      = "$installFwd/footprints/easyeda2kicad.pretty"
+        'IPEX-1'             = "$installFwd/footprints/IPEX-1.pretty"
+        'JST_PH_2P'          = "$installFwd/footprints/JST_PH_2P.pretty"
+        'new_footprint'      = "$installFwd/footprints/new_footprint.pretty"
+        'PinHeader_2P'       = "$installFwd/footprints/PinHeader_2P.pretty"
+        'Project_Components' = "$installFwd/footprints/Project_Components.pretty"
+        'SK-3296S-01-L2'     = "$installFwd/footprints/SK-3296S-01-L2.pretty"
+        'TYPEC-304J-BCP16'   = "$installFwd/footprints/TYPEC-304J-BCP16.pretty"
+        'Ziisor_IPEX-1'      = "$installFwd/footprints/Ziisor_IPEX-1.pretty"
+    }
+    $footprintTable = Join-Path $configDirPath 'fp-lib-table'
+    Update-LibTable -TablePath $footprintTable -TableName 'fp_lib_table' -Uris $footprintUris
+    Write-Host "Registered $($footprintUris.Count) footprint libraries in $footprintTable"
+
+    $symbolUris = [ordered]@{
+        'easyeda2kicad'      = "$installFwd/symbols/easyeda2kicad.kicad_sym"
+        'IPEX-1'             = "$installFwd/symbols/IPEX-1.kicad_sym"
+        'JST_PH_2P'          = "$installFwd/symbols/JST_PH_2P.kicad_sym"
+        'PinHeader_2P'       = "$installFwd/symbols/PinHeader_2P.kicad_sym"
+        'Project_Components' = "$installFwd/symbols/Project_Components.kicad_sym"
+        'SK-3296S-01-L2'     = "$installFwd/symbols/SK-3296S-01-L2.kicad_sym"
+        'TYPEC-304J-BCP16'   = "$installFwd/symbols/TYPEC-304J-BCP16.kicad_sym"
+        'Ziisor_IPEX-1'      = "$installFwd/symbols/Ziisor_IPEX-1.kicad_sym"
+    }
+    $symbolTable = Join-Path $configDirPath 'sym-lib-table'
+    Update-LibTable -TablePath $symbolTable -TableName 'sym_lib_table' -Uris $symbolUris
+    Write-Host "Registered $($symbolUris.Count) symbol libraries in $symbolTable"
 }
 
 Write-Host ''
-Write-Host 'Done. Open KiCad -> Preferences -> Manage Footprint Libraries to verify the libraries.'
+Write-Host 'Done. Open KiCad -> Preferences -> Manage Footprint Libraries and Manage Symbol Libraries to verify the libraries.'
 Write-Host 'The 3D models are installed next to the footprints and referenced by absolute path.'
